@@ -1,0 +1,11 @@
+# NPM & Composer
+vendor/
+node_modules/
+
+# Webpack compiled folders & files
+public/css/
+public/js/
+public/mix-manifest\.json
+
+# Yarn error log
+yarn-error.log

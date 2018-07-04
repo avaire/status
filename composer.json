@@ -1,0 +1,20 @@
+{
+    "name": "avaire/shards",
+    "description": "Display shard information live",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexis Tan",
+            "email": "alexis@sen-dev.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^5.6"
+    },
+    "autoload": {
+        "files": [
+            "helpers.php"
+        ]
+    }
+}

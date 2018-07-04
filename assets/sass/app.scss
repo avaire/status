@@ -1,0 +1,87 @@
+
+body {
+    background: #141414;
+    color: #aeaeae;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5.2em;
+    margin-top: 24px;
+    margin-bottom: 14px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #292929;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+p.currently-serving {
+    text-align: center;
+    font-size: 1.235rem;
+}
+
+.form-control {
+    outline: 0;
+    background: #1F1D1D;
+    border: 1px solid #292929;
+
+    &:focus {
+        outline: 0;
+        background: #1F1D1D;
+        border: 1px solid #292929;
+        box-shadow: 0 0 0 0.2rem rgba(41, 41, 41, .25);
+    }
+}
+
+.shard-box {
+    background: #1F1D1D;
+    padding: 3px 10px;
+    margin: 3px;
+    border-radius: 2px;
+    border: 1px solid #292929;
+
+    & .status {
+        float: right;
+        width: 12px;
+        margin: 6px 2px;
+        height: 12px;
+        background: #EC2538;
+        border-radius: 50%;
+
+        // Status types has been taken from the JDA github repo:
+        // https://github.com/DV8FromTheWorld/JDA/blob/3092875bd5fd1eec10f4973a34a13ab6b4170c6e/src/main/java/net/dv8tion/jda/core/JDA.java
+        &.connected { background: #59E53D; }
+        &.initializing, &.initialized, &.logging_in, &.connecting_to_websocket, &.identifying_session, &.awaiting_login_confirmation,
+        &.loading_subsystems, &.reconnect_queued, &.waiting_to_reconnect, &.attempting_to_reconnect { background: #E5DB3D; }
+    }
+
+    & p.error {
+        text-align: center;
+        padding-top: 8px;
+    }
+}
+
+footer {
+    margin-bottom: 75px;
+
+    a {
+        color: #5FBAF4;
+    }
+
+    p {
+        float: left;
+        text-align: right;
+    }
+    p:nth-child(2) {
+        float: right;
+    }
+}

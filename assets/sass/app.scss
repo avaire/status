@@ -54,14 +54,14 @@ p.currently-serving {
         width: 12px;
         margin: 6px 2px;
         height: 12px;
-        background: #EC2538;
+        background: #EC2538; // Defaults to a red color
         border-radius: 50%;
 
         // Status types has been taken from the JDA github repo:
-        // https://github.com/DV8FromTheWorld/JDA/blob/3092875bd5fd1eec10f4973a34a13ab6b4170c6e/src/main/java/net/dv8tion/jda/core/JDA.java
-        &.connected { background: #59E53D; }
+        // https://github.com/DV8FromTheWorld/JDA/blob/3092875bd5fd1eec10f4973a34a13ab6b4170c6e/src/main/java/net/dv8tion/jda/core/JDA.java#L43
+        &.connected { background: #59E53D; } // Green
         &.initializing, &.initialized, &.logging_in, &.connecting_to_websocket, &.identifying_session, &.awaiting_login_confirmation,
-        &.loading_subsystems, &.reconnect_queued, &.waiting_to_reconnect, &.attempting_to_reconnect { background: #E5DB3D; }
+        &.loading_subsystems, &.reconnect_queued, &.waiting_to_reconnect, &.attempting_to_reconnect { background: #E5DB3D; } // Yellow
     }
 
     & p.error {

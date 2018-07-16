@@ -8,7 +8,41 @@ This project uses [Composer](https://getcomposer.org/) for managing PHP packages
 
 The API endpoint that are hit to display the shard data is stored in the `assets/js/app.js` file, you can change it to anything else that returns a valid JSON object matching the one Ava sends.
 
-More information coming soon...
+An example of a valid JSON response from the API.
+
+```json
+{
+    "shards":[
+        {
+            "channels": 13145,
+            "guilds": 860,
+            "latency": 115,
+            "id": 1,
+            "users": 20168,
+            "status": "CONNECTED"
+        },
+        {
+            "channels": 12397,
+            "guilds": 811,
+            "latency": 112,
+            "id": 0,
+            "users": 15002,
+            "status": "CONNECTED"
+        }
+    ],
+    "global": {
+        "channels": {
+            "voice": 113882,
+            "total": 279007,
+            "text": 165125
+        },
+        "guilds": 17674,
+        "users": 568817
+    }
+}
+```
+
+The status on the page will change color depending on the status returned from the API, the status names are the [JDA Statuses](https://github.com/DV8FromTheWorld/JDA/blob/3092875bd5fd1eec10f4973a34a13ab6b4170c6e/src/main/java/net/dv8tion/jda/core/JDA.java#L43), you can see what color is giving to what status in the `assets/sass/app.sass` file.
 
 ## License
 

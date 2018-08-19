@@ -31,7 +31,7 @@ const app = new Vue({
     }
 });
 
-const request = new Request('https://api.avairebot.com/stats', {
+const request = new Request('https://api.avairebot.com/v1/stats', {
     parseJson: true
 });
 

@@ -5,6 +5,7 @@ const app = new Vue({
     data: {
         query: '',
         stats: {},
+        services: {},
         updateTime: 0
     },
     methods: {
@@ -27,20 +28,47 @@ const app = new Vue({
                 });
             }
             return shards;
+        },
+        formattedServices: function () {
+            // The order of the services is hardcoded here, just so
+            // they are groupped a bit better in the font-end.
+            let services = {};
+            let servicesOrder = [
+                'bot', 'website', 'database', 'lavalink-us', 'lavalink-eu'
+            ];
+            
+            for (let serviceName of servicesOrder) {
+                for (let service in this.services) {
+                    if (serviceName == service) {
+                        services[serviceName] = this.services[serviceName];
+                    }
+                }
+            }
+
+            return services;
         }
     }
 });
 
-const request = new Request('https://api.avairebot.com/v1/stats', {
+const statsRequest = new Request('https://api.avairebot.com/v1/stats', {
+    parseJson: true
+});
+
+const servicesRequest = new Request('https://api.avairebot.com/v1/services', {
     parseJson: true
 });
 
 const updateStats = () => {
     app.updateTime--;
     if (app.updateTime < 0) {
-        request.send().then(function (data) {
+        statsRequest.send().then(function (data) {
             app.stats = data;
-        }).catch(error => console.log('Error: ' + error));
+        }).catch(error => console.log('Error in stats request: ' + error));
+
+        servicesRequest.send().then(function (data) {
+            app.services = data;
+        }).catch(error => console.log('Error in services request: ' + error));
+
         app.updateTime = 30;
     }
 };

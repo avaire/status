@@ -39,6 +39,35 @@
             </div>
 
             <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>Services</h3>
+                </div>
+
+                <div
+                    v-for="(service, index) of formattedServices"
+                    :class="{
+                        'col-md-12': index == 'bot',
+                        'col-md-6': index != 'bot'
+                    }"
+                >
+                    <div class="service-box">
+                        <div class="row"> 
+                            <div
+                                class="col-md-12 service-status"
+                                :class="{ 'is-healthy': service.health == 'up' }"
+                            >
+                                <strong>{{ service.name }}</strong> is <strong>{{ service.health.toUpperCase() }}</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>Shards</h3>
+                </div>
+
                 <div v-for="shard of shards" class="col-md-4">
                     <div class="shard-box">
                         <h5>

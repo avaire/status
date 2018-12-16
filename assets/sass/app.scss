@@ -70,6 +70,23 @@ p.currently-serving {
     }
 }
 
+.service-box {
+    padding: 3px 10px;
+    margin: 3px;
+    text-align: center;
+    
+    & .service-status {
+        background: #be2525;
+        border-radius: 2px;
+        border: 1px solid #b62020;
+
+        &.is-healthy {
+            background: #1F1D1D;
+            border: 1px solid rgba(89, 229, 61, .40);
+        }
+    }
+}
+
 footer {
     margin-bottom: 75px;
 

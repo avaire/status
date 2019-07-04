@@ -1,6 +1,6 @@
 {
-    "name": "avaire/shards",
-    "description": "Display shard information live",
+    "name": "avaire/status",
+    "description": "Display information about AvaIre shards, services, and live statistics counter.",
     "type": "project",
     "license": "MIT",
     "authors": [

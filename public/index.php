@@ -45,10 +45,7 @@
 
                 <div
                     v-for="(service, index) of formattedServices"
-                    :class="{
-                        'col-md-12': index == 'bot',
-                        'col-md-6': index != 'bot'
-                    }"
+                    class="col-md-6"
                 >
                     <div class="service-box">
                         <div class="row"> 

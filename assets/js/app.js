@@ -34,7 +34,7 @@ const app = new Vue({
             // they are groupped a bit better in the font-end.
             let services = {};
             let servicesOrder = [
-                'bot', 'website', 'database', 'lavalink-us', 'lavalink-eu'
+                'bot', 'website', 'database', 'lavalink-us', 'lavalink-eu-amsterdam', 'lavalink-eu-france'
             ];
             
             for (let serviceName of servicesOrder) {

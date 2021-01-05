@@ -4,21 +4,6 @@
         "node": ">=6.0.0",
         "npm": ">=3.x.x"
     },
-    "xo": {
-        "space": 4,
-        "semicolon": true,
-        "rules": {
-            "camelcase": 0,
-            "new-parens": 0,
-            "guard-for-in": 0,
-            "prefer-const": 0,
-            "no-eval": 0,
-            "no-unused-vars": 0,
-            "no-prototype-builtins": 0,
-            "unicorn/filename-case": 0,
-            "import/no-dynamic-require": 0
-        }
-    },
     "scripts": {
         "dev": "npm run development",
         "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -29,12 +14,10 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
-        "bootstrap": "^4.3.1",
-        "jquery": "^3.4",
-        "laravel-mix": "^2.0",
-        "pako": "^1.0.6",
-        "popper.js": "^1.12",
-        "xo": "^0.20.2",
-        "vue": "^2.5.13"
+        "laravel-mix": "^5.0.9",
+        "resolve-url-loader": "^3.1.2",
+        "sass": "^1.32.0",
+        "sass-loader": "8.*",
+        "vue-template-compiler": "^2.6.12"
     }
 }
